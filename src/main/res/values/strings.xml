@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">DoorDashLite</string>
+    <string name="app_title">Discover</string>
+    <string name="delivery_fee">delivery fee</string>
+    <string name="delivery_time">delivery time</string>
+
+    // Dialogs
+    <string name="no_restaurants_title">No Available Restaurants</string>
+    <string name="no_restaurants_text">There are no restaurants enabled for our application in your area.</string>
+    <string name="no_restaurants_positive">Exit</string>
+    <string name="no_details_title">Restaurant Details Not Available</string>
+    <string name="no_details_text">No detailed information available.</string>
+    <string name="no_details_positive">Cancel</string>
+    <string name="no_internet_title">Internet Not Active</string>
+    <string name="no_internet_text">Internet is not connected. Use \"Open Settings\" to start your internet or wait until internet is reconnected.</string>
+    <string name="no_internet_positive">Open Settings</string>
+    <string name="no_internet_negative">Cancel</string>
+</resources>

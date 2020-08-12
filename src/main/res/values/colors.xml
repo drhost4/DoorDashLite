@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="list_item_separator_color">#2b271b</color>
+    <color name="list_item_delivery_time_text_color">#2b271b</color>
+</resources>

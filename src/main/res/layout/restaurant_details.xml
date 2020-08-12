@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/restaurantDetailLogo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/details_image_height"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/no_image_available" />
+
+            <TextView
+                android:id="@+id/restaurantDetailName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/details_default_start_margin"
+                android:layout_marginEnd="@dimen/details_default_end_margin"
+                android:maxLines="2"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/details_name_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantDetailLogo"
+                tools:text="Tsing Tao" />
+
+            <TextView
+                android:id="@+id/restaurantDetailDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/details_default_start_margin"
+                android:layout_marginTop="@dimen/details_default_top_margin"
+                android:layout_marginEnd="@dimen/details_default_end_margin"
+                android:maxLines="2"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/details_description_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantDetailName"
+                tools:text="Fast Food, Burgers" />
+
+            <View
+                android:id="@+id/restaurantDetailDeliveryView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/details_delivery_view_height"
+                android:layout_marginStart="@dimen/details_default_start_margin"
+                android:layout_marginTop="@dimen/details_delivery_view_top_margin"
+                android:layout_marginEnd="@dimen/details_default_end_margin"
+                android:background="@drawable/rounded_black_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantDetailDescription" />
+
+            <TextView
+                android:id="@+id/restaurantDetailDeliveryFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/details_fee_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/restaurantDetailDeliveryFeeLabel"
+                app:layout_constraintEnd_toEndOf="@+id/restaurantDetailDeliverySeparator"
+                app:layout_constraintStart_toStartOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintTop_toTopOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="$0" />
+
+            <TextView
+                android:id="@+id/restaurantDetailDeliveryFeeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delivery_fee"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/details_fee_label_text_size"
+                app:layout_constraintBottom_toBottomOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintEnd_toEndOf="@+id/restaurantDetailDeliverySeparator"
+                app:layout_constraintStart_toStartOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantDetailDeliveryFee" />
+
+            <View
+                android:id="@+id/restaurantDetailDeliverySeparator"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/detail_delivery_info_horizontal_margin"
+                android:layout_marginBottom="@dimen/detail_delivery_info_horizontal_margin"
+                android:background="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintEnd_toEndOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintStart_toStartOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintTop_toTopOf="@+id/restaurantDetailDeliveryView" />
+
+            <TextView
+                android:id="@+id/restaurantDetailDeliveryTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/details_time_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/restaurantDetailDeliveryTimeLabel"
+                app:layout_constraintEnd_toEndOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintStart_toEndOf="@+id/restaurantDetailDeliverySeparator"
+                app:layout_constraintTop_toTopOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="15 min" />
+
+            <TextView
+                android:id="@+id/restaurantDetailDeliveryTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delivery_time"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/details_time_label_text_size"
+                app:layout_constraintBottom_toBottomOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintEnd_toEndOf="@+id/restaurantDetailDeliveryView"
+                app:layout_constraintStart_toEndOf="@+id/restaurantDetailDeliverySeparator"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantDetailDeliveryTime" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/restaurantDetailsLoading"
+        android:layout_width="@dimen/progress_bar_size"
+        android:layout_height="@dimen/progress_bar_size"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
